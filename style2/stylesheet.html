@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use of Internal and External Stylesheets</title>
+    <link rel="stylesheet" href="xyz.css" type="text/css"> <!-- External CSS link -->
+    <style type="text/css">
+    
+        .vid {
+            font-family: Georgia, serif;
+            color: #ff9900;
+            font-size: x-small;
+            text-align: center;
+        }
+
+        .ani {
+            font-family: Tahoma, sans-serif;
+            font-style: italic;
+            color: red;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        p {
+            font-family: Georgia, serif;
+            font-size: 20px;
+            color: blue;
+            text-align: center;
+        }
+
+        hr {
+            color: #ff9900;
+            height: 1px;
+        }
+
+        a:hover {
+            color: #ff0000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:blue;margin-left:30px;text-align:center;">ALL STYLE SHEETS</h1> <!-- In-line style Sheet -->
+
+    <h2>Welcome</h2> <!-- In-line style Sheet -->
+    <ol style="list-style-type:lower-alpha;">
+        <b>St.Anne’s College of Engineering and Technology</b><br><br><br>
+        <li>EEE</li>
+        <li>ECE</li>
+        <li>MECH</li>
+        <li>CSE</li>
+    </ol>
+
+    <p style="font-size:20pt;color:purple">Details</p>
+    <p class="ani">St.Anne’s College <br>It is approved by AICTE (All India Council for Technical Education). It is affiliated to Anna University.<br></p>
+
+    <h2 class="vid">St.Anne’s College of Engineering</h2><br>
+    <font>It is an ISO certified Institution</font><br><br>
+
+    <h2>List of Courses Offered</h2>
+    <ul>
+        <li>Computer Science and Engineering</li>
+        <li>ECE</li>
+        <li>MECH</li>
+        <li>EEE</li>
+    </ul>
+
+    <h3>Results of CSE Students</h3>
+    <table width="100%" cellspacing="2" cellpadding="2" border="5">
+        <thead>
+            <tr>
+                <th>S. NAME</th>
+                <th>MARKS</th>
+                <th>RESULT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center">Suppriya</td>
+                <td align="center">100</td>
+                <td align="center">Pass</td>
+            </tr>
+            <tr>
+                <td align="center">Devishree</td>
+                <td align="center">99</td>
+                <td align="center">Pass</td>
+            </tr>
+            <tr>
+                <td align="center">Vinayagam</td>
+                <td align="center">98</td>
+                <td align="center">Pass</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
