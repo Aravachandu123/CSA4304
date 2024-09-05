@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page</title>
+    <script language="javascript">
+        function validate() {
+            var flag = 1;
+
+            // Check if any field is empty
+            if (document.myform.id.value == "" || 
+                document.myform.pwd.value == "" || 
+                document.myform.amount.value == "" || 
+                document.myform.num.value == "") {
+                flag = 0;
+            }
+
+            // Validate amount (ensure it is numeric)
+            var str = document.myform.amount.value;
+            for (var i = 0; i < str.length; i++) {
+                var x = str.substr(i, 1);
+                if (isNaN(x)) {  // Ensure that each character is numeric
+                    flag = 0;
+                    break;
+                }
+            }
+
+            // Validate credit card number (ensure it is numeric)
+            str = document.myform.num.value;
+            for (var i = 0; i < str.length; i++) {
+                var x = str.substr(i, 1);
+                if (isNaN(x)) {  // Ensure that each character is numeric
+                    flag = 0;
+                    break;
+                }
+            }
+
+            // Final validation outcome
+            if (flag == 1) {
+                alert("VALID INPUT");
+            } else {
+                alert("INVALID INPUT");
+                document.myform.focus();
+            }
+            return false; // Prevent form submission
+        }
+    </script>
+</head>
+<body bgcolor="pink">
+    <br><br><br>
+    <form name="myform" onsubmit="return validate();">
+        <div align="center">
+            <pre>
+LOGIN ID       : <input type="text" name="id"><br>
+PASSWORD       : <input type="password" name="pwd"><br>
+AMOUNT         : <input type="text" name="amount"><br>
+CREDIT CARD NO : <input type="password" name="num"><br>
+            </pre>
+            <br><br>
+        </div>
+        <div align="center">
+            <input type="submit" value="ok">
+            <input type="reset" value="clear">
+        </div>
+    </form>
+</body>
+</html>
